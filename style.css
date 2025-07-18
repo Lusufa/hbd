@@ -627,6 +627,51 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left, .right {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .hat img {
+    width: 80px;
+  }
+
+  .btn button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .flag__birthday {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flag__left, .flag__right {
+    width: 90%;
+  }
+
+  .card1, .card2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .imageCute img, .imageCute2 img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
