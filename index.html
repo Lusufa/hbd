@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Lavanaya_r</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="wrapper">
+    <div class="content">
+      <!-- Left Panel -->
+      <div class="left">
+        <div class="happy">
+          <span>H</span><span>A</span><span>P</span><span>P</span><span>Y</span>
+          <div class="hat">
+            <img src="./images/hat.png" alt="hat" width="80" />
+          </div>
+        </div>
+        <div class="birthday">
+          <span>B</span><span>I</span><span>R</span><span>T</span><span>H</span><span>D</span><span>A</span><span>Y</span>
+        </div>
+        <div class="date__of__birth">18 JULY 200?😐</div>
+        <div class="btn">
+          <button onclick="toggleLetter()">Read Letter 💌</button>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right">
+        <div class="box__account">
+          <div class="image">
+            <img src="./images/1.png" alt="profile" />
+          </div>
+          <div class="name">
+            <span>Lavanaya_r</span>
+          </div>
+          <div class="cricle">
+            <div class="text__cricle">
+              <span>Funny</span>
+              <span>Beautiful</span>
+              <span>Creative</span>
+              <span>Smart</span>
+              <span>Kind</span>
+              <span>Caring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Letter Popup -->
+  <div class="boxMail" id="boxMail">
+    <i class="fa-solid fa-xmark" onclick="toggleLetter()"></i>
+    <div class="card1">
+      <div class="userImg">
+        <img src="./images/unnamed.png" alt="sender" />
+      </div>
+    </div>
+    <div class="card2">
+      <div class="imageCute2">
+        <img src="./cute2.png" alt="cute" />
+      </div>
+      <div class="imageCute">
+        <img src="./cute1.png" alt="cute" />
+      </div>
+    </div>
+    <div class="title__letter">Dear Lavanaya_r</div>
+    <div class="text__letter">
+      <p>
+        Happy Birthday! 🎉 On this special day, I just wanted to remind you how amazing you are. You're one of the funniest, kindest souls I know.
+        May your year ahead be filled with joy, laughter, and endless memories. Stay awesome, always. 🌸
+      </p>
+    </div>
+  </div>
+
+  <!-- Decorations -->
+  <img src="./images/decorate_flower.png" class="decorate_flower--one" />
+  <img src="./images/decorate_flower.png" class="decorate_flower--two" />
+  <img src="./images/decorate_flower.png" class="decorate_flower--three" />
+  <img src="./images/balloon1.png" class="decorate_star" />
+  <img src="./images/decorate.png" class="decorate_bottom" />
+  <img src="./images/smiley_icon.png" class="smiley__icon" />
+
+  <!-- Optional: Background Music -->
+  
+  <audio autoplay loop muted id="bg-music">
+  <source src="./src/happy-birthday.mp3" type="audio/mpeg" />
+</audio>
+<button onclick="document.getElementById('bg-music').muted = false">🔊 Unmute</button>
+
+
+
+  <!-- JS -->
+  <script>
+    function toggleLetter() {
+      const box = document.getElementById("boxMail");
+      box.classList.toggle("active");
+    }
+
+    // Optional: Add fade-in effect to letters
+    window.onload = () => {
+      const spans = document.querySelectorAll('.happy span, .birthday span');
+      spans.forEach((span, i) => {
+        span.style.animationDelay = `${i * 0.1}s`;
+        span.style.animation = 'fadeIn 0.6s ease forwards';
+      });
+    };
+  </script>
+</body>
+</html>
