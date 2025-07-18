@@ -146,16 +146,25 @@
     </div>
   </div>
 
-  <script>
-  window.addEventListener("load", function () {
-    const music = document.getElementById('bg-music');
-    // Try to autoplay (may fail silently on some browsers)
-    music.play().catch((e) => {
-      console.log("Autoplay blocked by browser: ", e);
-    });
-  });
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="./src/happy-birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-    
+  <!-- Play Music Button -->
+  <button onclick="playMusic()"
+    style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; background-color: #ff69b4; color: white; border: none; padding: 10px 15px; border-radius: 10px; font-size: 16px; cursor: pointer;">
+    🔊 Play Music
+  </button>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById('bg-music');
+      music.play().catch((e) => {
+        console.log("Audio play failed: ", e);
+      });
+    }
 
     // Existing script (unchanged)
     let datetxt = "18th July 200?🫡";
@@ -256,7 +265,7 @@
     close.addEventListener('click', function () {
       boxmail.classList.remove('active')
     })
-  </scrip>
+  </script>
 </body>
 
 </html>
